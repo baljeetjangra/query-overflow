@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Getting Started
 
 First Env vairables required:
+Create a .env.local file (get your own clerk keys by sign up)
 
 ```bash
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=

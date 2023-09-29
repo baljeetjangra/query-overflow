@@ -1,8 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+##Live - https://query-overflow.vercel.app/
 
 ## Getting Started
-
-Live - https://query-overflow.vercel.app/
 
 First Env vairables required:
 Create a .env.local file (get your own clerk keys by sign up)

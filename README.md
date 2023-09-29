@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Live - https://query-overflow.vercel.app/
+
 First Env vairables required:
 Create a .env.local file (get your own clerk keys by sign up)
 

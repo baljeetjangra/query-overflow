@@ -10,7 +10,7 @@ export const connectToDatabase = async () => {
   }
 
   if (isConnected) {
-    return console.log("Mongoose is already connected");
+    return;
   }
 
   try {

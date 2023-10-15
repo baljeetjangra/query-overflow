@@ -2,7 +2,7 @@ import Filter from "@/components/shared/Filter";
 import NoResult from "@/components/shared/NoResult";
 import QuestionCard from "@/components/shared/card/QuestionCard";
 import HomeFilters from "@/components/shared/home/HomeFilters";
-import LocalSearchBar from "@/components/shared/search/LocalSearchBar";
+import LocalSearchbar from "@/components/shared/search/LocalSearchBar";
 import { Button } from "@/components/ui/button";
 import { HomePageFilters } from "@/constants/filters";
 import { getQuestions } from "@/lib/actions/question.action";
@@ -10,9 +10,12 @@ import { SearchParamsProps } from "@/types";
 import Link from "next/link";
 
 export default async function Home({ searchParams }: SearchParamsProps) {
-  const results = await getQuestions({
+  const result = await getQuestions({
     searchQuery: searchParams.q,
+    filter: searchParams.filter,
   });
+
+  // Fetch Recommended Questions
 
   return (
     <>
@@ -27,7 +30,7 @@ export default async function Home({ searchParams }: SearchParamsProps) {
       </div>
 
       <div className="mt-11 flex justify-between gap-5 max-sm:flex-col sm:items-center">
-        <LocalSearchBar
+        <LocalSearchbar
           route="/"
           iconPosition="left"
           imgSrc="/assets/icons/search.svg"
@@ -45,8 +48,8 @@ export default async function Home({ searchParams }: SearchParamsProps) {
       <HomeFilters />
 
       <div className="mt-10 flex w-full flex-col gap-6">
-        {results.questions.length > 0 ? (
-          results.questions.map((question) => (
+        {result.questions.length > 0 ? (
+          result.questions.map((question) => (
             <QuestionCard
               key={question._id}
               _id={question._id}
